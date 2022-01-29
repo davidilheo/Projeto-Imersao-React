@@ -38,7 +38,7 @@ import {useRouter} from 'next/router';
   
   export default function PaginaInicial() {
     //const username = 'davidilheo';
-    const [username, setUsername] = react.useState('Joker');
+    const [username, setUsername] = react.useState('davidilheo');
     const roteamento = useRouter();
     
   
@@ -72,8 +72,7 @@ import {useRouter} from 'next/router';
               as="form"
               onSubmit= {function (infosDoEvento){
                 infosDoEvento.preventDefault();
-                window.location.href = '/chat';
-                roteamento.push('/chat');
+                roteamento.push(`/chat?username=${username}`);
 
               }
           }
@@ -152,7 +151,7 @@ import {useRouter} from 'next/router';
                   borderRadius: '50%',
                   marginBottom: '16px',
                 }}
-                src={`https://pbs.twimg.com/media/EtHbT7sUwAQ_w__.png`}
+                src={`https://github.com/${username}.png`}
               />
               <Text
                 variant="body4"
